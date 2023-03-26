@@ -1,0 +1,27 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: chaosexperiments.k8s-chaos-engineering.erdenayates.com
+spec:
+  group: k8s-chaos-engineering.erdenayates.com
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              properties:
+                # Add your custom fields here
+            status:
+              type: object
+              properties:
+                # Add your custom fields here
+  names:
+    kind: ChaosExperiment
+    plural: chaosexperiments
+    singular: chaosexperiment
+  scope: Namespaced
